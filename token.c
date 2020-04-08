@@ -1,5 +1,8 @@
 /*
  * a simple handcoded scanner for the tiger language that accepts source code from stdin
+ *
+ * TOKENISER ASSUMES THAT COMMENTS ARE REMOVED PRIOR TO THE TOKENISING PROCESS
+ *
  */
 #include "token.h"
 #include <stdio.h>
