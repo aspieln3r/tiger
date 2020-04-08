@@ -18,6 +18,13 @@ char getnext()
 		return (char)ch;
 }
 
+int isidchar(char ch)
+{
+	if ( isalnum(ch) || ch == '_' )
+		return 1;
+	else return 0;
+}
+
 void settok( token* tok,int ival, char* buffer )
 {
 	tok->ival=ival;
@@ -42,7 +49,7 @@ token* nextToken(token *tok)
 	buffer[1] = '\0';
 	if(isalpha(buffer[0]))
 	{
-		for( i=1; isalnum( buffer[i] = getnext() ); i++ )
+		for( i=1; isidchar( buffer[i] = getnext() ); i++ )
 			;
 		ungetc( buffer[i],stdin );
 		buffer[i]='\0';
@@ -79,7 +86,7 @@ token* nextToken(token *tok)
 		{
 			if( ! isdigit(buffer[k]) )
 			{
-				fprintf(stderr,"Invalid token: \"%s\" \n exiting...",buffer);
+				fprintf(stderr,"Invalid token: \"%s\" \n exiting...\n",buffer);
 				exit(1);
 			}
 		}
