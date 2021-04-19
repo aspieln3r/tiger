@@ -1,4 +1,4 @@
-# tiger
+# toyC
 
 A lightweight compiler frontend for the C programming language
 
