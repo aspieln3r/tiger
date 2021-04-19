@@ -1,5 +1,5 @@
 /*
- * a simple handcoded scanner for the tiger language that accepts source code from stdin
+ * a simple handcoded scanner for the C language that accepts source code from stdin
  *
  * TOKENISER ASSUMES THAT COMMENTS ARE REMOVED PRIOR TO THE TOKENISING PROCESS
  *
